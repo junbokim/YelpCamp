@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camp Grounds</title>
+    <style>
+        div{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+<body>
+    <h1>Camp Grounds</h1>
+    <div>
+        <span>
+            <ul>
+                <% for(let campground of campgrounds) {%>
+                    <li><a href="/campgrounds/<%= campground._id %> "><%= campground.title %></a></li>
+                <% } %>  
+            </ul>
+        </span>
+        <span><a href="/campgrounds/new">Add new Campgrounds</a></span>
+    </div>
+</body>
+</html>
